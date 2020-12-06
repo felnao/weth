@@ -1,1 +1,1 @@
-# weth
+# weth subraph

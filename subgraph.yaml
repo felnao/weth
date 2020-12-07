@@ -1,0 +1,32 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: WETH9
+    network: mainnet
+    source:
+      address: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+      abi: WETH9
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - ApprovalEntity
+        - TransferEntity
+        - DepositEntity
+        - WithdrawalEntity
+      abis:
+        - name: WETH9
+          file: ./abis/WETH9.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: Deposit(indexed address,uint256)
+          handler: handleDeposit
+        - event: Withdrawal(indexed address,uint256)
+          handler: handleWithdrawal
+      file: ./src/mapping.ts

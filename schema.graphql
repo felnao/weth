@@ -1,0 +1,25 @@
+type ApprovalEntity @entity {
+  id: ID!
+  src: Bytes! 
+  guy: Bytes! 
+  wad: BigInt!
+}
+
+type TransferEntity @entity {
+  id: ID!
+  src: Bytes! 
+  dst: Bytes! 
+  wad: BigInt!
+}
+
+type DepositEntity @entity {
+  id: ID!
+  dst: Bytes! 
+  wad: BigInt!
+}
+
+type WithdrawalEntity @entity {
+  id: ID!
+  src: Bytes! 
+  wad: BigInt!
+}

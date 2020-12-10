@@ -1,4 +1,4 @@
-Wrapped ETH subgraph
+Wrapped ETH subgraph by Felnao#9580 and kkheireddine#2834 and 1951Ahcene#3013
 
 Wrapped Ethereum delivers the power of Ethereum with the flexibility of an ERC20 token.
 

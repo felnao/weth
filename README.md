@@ -31,5 +31,4 @@ EventHandlers
     event: Transfer(indexed address,indexed address,uint256)
         handler: handleTransfer
 
-Realized by : Felano9580
-              ALD#8084
+
